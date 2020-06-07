@@ -10,7 +10,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: 'Spitfire1900/git-client-plugin'
-        ref: Spitfire1900-handle-PortableGit
+        ref: ${{github.ref}}
     - name: mvn build
       run: |
         mvn integration-test
