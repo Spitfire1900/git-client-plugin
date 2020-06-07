@@ -3,7 +3,7 @@ name: Build Pom
 on: [push, repository_dispatch]
 
 jobs:
-  build:
+  integration-test:
     runs-on: windows-2016
     steps:
     - name: Checkout
