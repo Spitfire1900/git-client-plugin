@@ -1,0 +1,16 @@
+name: Build Pom
+
+on: [push, repository_dispatch]
+
+jobs:
+  build:
+    runs-on: windows-2016
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        repository: 'Spitfire1900/git-client-plugin'
+        ref: Spitfire1900-handle-PortableGit
+    - name: mvn build
+      run: |
+        mvn --help; mvn build
