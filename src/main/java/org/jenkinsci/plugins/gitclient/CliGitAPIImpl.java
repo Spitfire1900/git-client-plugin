@@ -2220,9 +2220,9 @@ public class CliGitAPIImpl extends LegacyCompatibleGitAPIImpl {
         File userGitFile = new File(userGitExe);
         if (userGitFile.exists() && userGitFile.canExecute()) {
             return userGitFile.getAbsolutePath();
-        } //Handle PortableGit
-	    else if (userGitFile.isDirectory() && new File(userGitFile.getAbsolutePath() + file.separator + 'bin' + file.separator + 'git.exe').exists()) {
-		    return userGitFile.getAbsolutePath() + file.separator + 'bin' + file.separator + 'git.exe'
+        } //Handle auto-installed PortableGit
+	    else if (userGitFile.isDirectory() && new File(userGitFile.getAbsolutePath() + File.separator + "bin" + File.separator + "git.exe").exists()) {
+		    return userGitFile.getAbsolutePath() + File.separator + "bin" + File.separator + "git.exe";
 	    }
 
         return null;
