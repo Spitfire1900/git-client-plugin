@@ -13,4 +13,4 @@ jobs:
         ref: Spitfire1900-handle-PortableGit
     - name: mvn build
       run: |
-        mvn --help; mvn build
+        mvn integration-test
